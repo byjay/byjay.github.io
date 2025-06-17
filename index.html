@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>오토캐드 강좌 블로그 - AutoCAD 배우기</title>
+    <meta name="description" content="오토캐드 초보자를 위한 단계별 강좌와 실무 팁을 제공하는 전문 블로그입니다.">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- 헤더 -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-drafting-compass"></i>
+                    <span>AutoCAD 강좌</span>
+                </div>
+                <nav class="nav">
+                    <ul class="nav-menu">
+                        <li><a href="#home" class="nav-link active">홈</a></li>
+                        <li class="dropdown">
+                            <a href="#tutorials" class="nav-link">강좌 <i class="fas fa-chevron-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#basic-tutorials">기초 강좌</a></li>
+                                <li><a href="#advanced-tutorials">심화 강좌</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#tips" class="nav-link">팁 & 노하우</a></li>
+                        <li><a href="#resources" class="nav-link">자료실</a></li>
+                        <li><a href="#about" class="nav-link">소개</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <div class="search-box">
+                        <input type="text" id="searchInput" placeholder="강좌 검색...">
+                        <button id="searchBtn"><i class="fas fa-search"></i></button>
+                    </div>
+                    <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 메인 콘텐츠 -->
+    <main class="main">
+        <!-- 히어로 섹션 -->
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1 class="hero-title">오토캐드를 <span class="highlight">쉽고 빠르게</span> 배우세요</h1>
+                        <p class="hero-description">
+                            초보자부터 전문가까지, 단계별 강좌와 실무 팁으로 
+                            오토캐드 마스터가 되어보세요. 실제 예제와 함께하는 
+                            체계적인 학습을 제공합니다.
+                        </p>
+                        <div class="hero-buttons">
+                            <a href="#basic-tutorials" class="btn btn-primary">기초 강좌 시작하기</a>
+                            <a href="#tips" class="btn btn-secondary">팁 둘러보기</a>
+                        </div>
+                    </div>
+                    <div class="hero-image">
+                        <div class="autocad-mockup">
+                            <div class="mockup-screen">
+                                <div class="mockup-toolbar"></div>
+                                <div class="mockup-canvas">
+                                    <div class="drawing-element line"></div>
+                                    <div class="drawing-element circle"></div>
+                                    <div class="drawing-element rectangle"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 최신 강좌 섹션 -->
+        <section class="latest-tutorials">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">최신 강좌</h2>
+                    <p class="section-description">새로 업데이트된 강좌를 확인해보세요</p>
+                </div>
+                <div class="tutorials-grid" id="latestTutorials">
+                    <!-- 동적으로 생성될 강좌 카드들 -->
+                </div>
+            </div>
+        </section>
+
+        <!-- 기초 강좌 섹션 -->
+        <section id="basic-tutorials" class="basic-tutorials">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">기초 강좌</h2>
+                    <p class="section-description">오토캐드를 처음 시작하는 분들을 위한 단계별 강좌</p>
+                </div>
+                <div class="tutorials-grid" id="basicTutorials">
+                    <!-- 동적으로 생성될 기초 강좌 카드들 -->
+                </div>
+            </div>
+        </section>
+
+        <!-- 팁 & 노하우 섹션 -->
+        <section id="tips" class="tips-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">팁 & 노하우</h2>
+                    <p class="section-description">작업 효율을 높이는 실무 팁과 노하우</p>
+                </div>
+                <div class="tips-grid" id="tipsGrid">
+                    <!-- 동적으로 생성될 팁 카드들 -->
+                </div>
+            </div>
+        </section>
+
+        <!-- 자료실 섹션 -->
+        <section id="resources" class="resources-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">자료실</h2>
+                    <p class="section-description">학습에 도움이 되는 예제 파일과 템플릿</p>
+                </div>
+                <div class="resources-grid">
+                    <div class="resource-card">
+                        <div class="resource-icon">
+                            <i class="fas fa-download"></i>
+                        </div>
+                        <h3>예제 파일</h3>
+                        <p>강좌에서 사용된 예제 파일을 다운로드하여 직접 실습해보세요.</p>
+                        <a href="#" class="resource-link">다운로드 <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="resource-card">
+                        <div class="resource-icon">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <h3>템플릿 파일</h3>
+                        <p>자주 사용하는 도면 템플릿을 제공합니다.</p>
+                        <a href="#" class="resource-link">다운로드 <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="resource-card">
+                        <div class="resource-icon">
+                            <i class="fas fa-keyboard"></i>
+                        </div>
+                        <h3>단축키 모음</h3>
+                        <p>오토캐드 필수 단축키를 PDF로 다운로드하세요.</p>
+                        <a href="#" class="resource-link">다운로드 <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 푸터 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-drafting-compass"></i>
+                        <span>AutoCAD 강좌</span>
+                    </div>
+                    <p class="footer-description">
+                        오토캐드 학습을 위한 최고의 온라인 강좌 플랫폼입니다. 
+                        체계적인 커리큘럼과 실무 중심의 콘텐츠를 제공합니다.
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h4>강좌</h4>
+                    <ul class="footer-links">
+                        <li><a href="#basic-tutorials">기초 강좌</a></li>
+                        <li><a href="#advanced-tutorials">심화 강좌</a></li>
+                        <li><a href="#tips">팁 & 노하우</a></li>
+                        <li><a href="#resources">자료실</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>정보</h4>
+                    <ul class="footer-links">
+                        <li><a href="#about">블로그 소개</a></li>
+                        <li><a href="#contact">연락처</a></li>
+                        <li><a href="#privacy">개인정보처리방침</a></li>
+                        <li><a href="#terms">이용약관</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>소셜 미디어</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 AutoCAD 강좌 블로그. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript 파일들 -->
+    <script src="scripts/main.js"></script>
+    <script src="scripts/tutorials.js"></script>
+    <script src="scripts/search.js"></script>
+</body>
+</html>
+
