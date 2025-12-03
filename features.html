@@ -1,34 +1,21 @@
----
-layout: default
-title: Feature Blog
-permalink: /features/
----
+<button class="filter-btn" data-filter="zwcad">ZWCAD</button>
+</div>
 
-<div class="features-container">
-    <h1>Ultimate Feature Guide</h1>
-    <p>Explore detailed guides for AutoCAD and ZWCAD features.</p>
-
-    <div class="filter-controls">
-        <button class="filter-btn active" data-filter="all">All</button>
-        <button class="filter-btn" data-filter="autocad">AutoCAD</button>
-        <button class="filter-btn" data-filter="zwcad">ZWCAD</button>
-    </div>
-
-    <div class="features-grid">
-        {% for feature in site.features %}
-        <div class="feature-card {{ feature.software | downcase }}">
-            <div class="card-header">
-                <span class="badge {{ feature.software | downcase }}">{{ feature.software }}</span>
-                <span class="badge {{ feature.difficulty | downcase }}">{{ feature.difficulty }}</span>
-            </div>
-            <h3><a href="{{ feature.url }}">{{ feature.title }}</a></h3>
-            <p>{{ feature.description | truncate: 100 }}</p>
-            <div class="card-footer">
-                <span class="category">{{ feature.category }}</span>
-            </div>
+<div class="features-grid">
+    {% for feature in site.features %}
+    <div class="feature-card {{ feature.software | downcase }}">
+        <div class="card-header">
+            <span class="badge {{ feature.software | downcase }}">{{ feature.software }}</span>
+            <span class="badge {{ feature.difficulty | downcase }}">{{ feature.difficulty }}</span>
         </div>
-        {% endfor %}
+        <h3><a href="{{ feature.url }}">{{ feature.title }}</a></h3>
+        <p>{{ feature.description | truncate: 100 }}</p>
+        <div class="card-footer">
+            <span class="category">{{ feature.category }}</span>
+        </div>
     </div>
+    {% endfor %}
+</div>
 </div>
 
 <style>

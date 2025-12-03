@@ -1,7 +1,7 @@
 ---
 title: "Flexiblock (ZWCAD)"
 date: 2025-12-03
-category: Feature
+category: 블록
 difficulty: Intermediate
 layout: feature
 ---
@@ -13,23 +13,60 @@ layout: feature
     <span class="badge difficulty intermediate">Intermediate</span>
 </div>
 
-## Description
-Speed up your workflow with Flexiblock that contains parameters and actions. Plus, It can be created or edited to fit your needs.
+## 기능 설명 (Description)
+블록을 유연하게 편집하고 재사용할 수 있는 기능입니다.
 
-
-## Video Tutorial
-<div class="video-container">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/EJRapDSCZdI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<!-- AdSense Fluid -->
+<div class="ad-container" style="margin: 20px 0;">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5240158357882882" crossorigin="anonymous"></script>
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-format="fluid"
+         data-ad-layout-key="-6t+ed+2i-1n-4w"
+         data-ad-client="ca-pub-5240158357882882"
+         data-ad-slot="3083770395"></ins>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
 </div>
 
 
-## Step-by-Step Guide
+## 동영상 강좌 (Video Tutorial)
+<div class="video-container">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/GCzax-C207A" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
-<p>No specific steps available.</p>
+<!-- AdSense Square -->
+<div class="ad-container" style="text-align:center; margin: 20px 0;">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5240158357882882" crossorigin="anonymous"></script>
+    <!-- 사각1 -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-5240158357882882"
+         data-ad-slot="5669571134"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+
+## 사용 방법 (Step-by-Step)
+
+<div class="steps-container">
+    <ol>
+    
+        <li>기능을 실행합니다.</li>
+    
+        <li>옵션을 설정합니다.</li>
+    
+    </ol>
+</div>
 
 
 
 
-## Related Commands
-* [Link to related command 1](#)
-* [Link to related command 2](#)
+## 관련 명령어
+* [관련 명령어 링크 1](#)
+* [관련 명령어 링크 2](#)

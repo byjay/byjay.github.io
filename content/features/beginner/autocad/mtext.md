@@ -1,7 +1,7 @@
 ---
 title: "MTEXT (AutoCAD)"
 date: 2025-12-03
-category: Annotation
+category: 주석
 difficulty: Beginner
 layout: feature
 ---
@@ -13,24 +13,53 @@ layout: feature
     <span class="badge difficulty beginner">Beginner</span>
 </div>
 
-## Description
-Creates a multiline text object.
+## 기능 설명 (Description)
+여러 줄 문자 객체를 작성합니다.
 
-
-## Video Tutorial
-<div class="video-container">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/pl5u-cLOZHs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<!-- AdSense Fluid -->
+<div class="ad-container" style="margin: 20px 0;">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5240158357882882" crossorigin="anonymous"></script>
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-format="fluid"
+         data-ad-layout-key="-6t+ed+2i-1n-4w"
+         data-ad-client="ca-pub-5240158357882882"
+         data-ad-slot="3083770395"></ins>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
 </div>
 
 
-## Step-by-Step Guide
+## 동영상 강좌 (Video Tutorial)
+<div class="video-container">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/tuFsYIpYwME" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<!-- AdSense Square -->
+<div class="ad-container" style="text-align:center; margin: 20px 0;">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5240158357882882" crossorigin="anonymous"></script>
+    <!-- 사각1 -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-5240158357882882"
+         data-ad-slot="5669571134"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+
+## 사용 방법 (Step-by-Step)
 
 <div class="steps-container">
     <ol>
     
-        <li>Run the command.</li>
+        <li>명령어를 입력합니다.</li>
     
-        <li>Follow prompts.</li>
+        <li>프롬프트의 지시를 따릅니다.</li>
     
     </ol>
 </div>
@@ -38,6 +67,6 @@ Creates a multiline text object.
 
 
 
-## Related Commands
-* [Link to related command 1](#)
-* [Link to related command 2](#)
+## 관련 명령어
+* [관련 명령어 링크 1](#)
+* [관련 명령어 링크 2](#)

@@ -1,0 +1,316 @@
+---
+layout: default
+title: Feature Browser (React)
+permalink: /features-react/
+---
+
+<div id="react-root"></div>
+
+<!-- React & ReactDOM -->
+<script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+<!-- Babel for JSX -->
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+<!-- Web CAD Engine -->
+<script src="/scripts/webcad/core.js"></script>
+<script src="/scripts/webcad/commands/line.js"></script>
+
+<script type="text/babel">
+    const { useState, useEffect, useRef } = React;
+
+    function FeatureBrowser() {
+        const [features, setFeatures] = useState([]);
+        const [filter, setFilter] = useState('all');
+        const [searchTerm, setSearchTerm] = useState('');
+        const [showSim, setShowSim] = useState(false);
+        const [simCommand, setSimCommand] = useState(null);
+        const canvasRef = useRef(null);
+        const cadCoreRef = useRef(null);
+
+        useEffect(() => {
+            // Check for search query param
+            const urlParams = new URLSearchParams(window.location.search);
+            const searchParam = urlParams.get('search');
+            if (searchParam) {
+                setSearchTerm(searchParam);
+            }
+
+            fetch('/data/deep_features.json')
+                .then(res => res.json())
+                .then(data => setFeatures(data))
+                .catch(err => console.error("Failed to load features:", err));
+        }, []);
+
+        // Initialize CAD when modal opens
+        useEffect(() => {
+            if (showSim && canvasRef.current) {
+                // Small delay to ensure canvas is rendered
+                setTimeout(() => {
+                    if (!cadCoreRef.current) {
+                        cadCoreRef.current = new window.WebCadCore('cad-canvas');
+                    }
+                    if (simCommand) {
+                        const cmdName = simCommand.name.toUpperCase();
+                        cadCoreRef.current.startCommand(cmdName);
+                    }
+                }, 100);
+            } else {
+                if (cadCoreRef.current) {
+                    cadCoreRef.current = null;
+                }
+            }
+        }, [showSim, simCommand]);
+
+        const filteredFeatures = features.filter(f => {
+            const matchesFilter = filter === 'all' || f.software.toLowerCase() === filter;
+            const matchesSearch = f.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                (f.description && f.description.toLowerCase().includes(searchTerm.toLowerCase()));
+            return matchesFilter && matchesSearch;
+        });
+
+        const handleTryIt = (feature) => {
+            setSimCommand(feature);
+            setShowSim(true);
+        };
+
+        const closeSim = () => {
+            setShowSim(false);
+            setSimCommand(null);
+        };
+
+        return (
+            <div className="features-container">
+                <h1>Ultimate Feature Guide (React)</h1>
+                <p>AutoCAD 및 ZWCAD의 모든 기능을 검색하고 학습하세요.</p>
+
+                <div className="controls" style={{ margin: '20px 0', display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
+                    <input
+                        type="text"
+                        placeholder="기능 검색..."
+                        value={searchTerm}
+                        onChange={(e) => setSearchTerm(e.target.value)}
+                        style={{ padding: '8px', borderRadius: '4px', border: '1px solid #ccc', flexGrow: 1 }}
+                    />
+                    <div className="filter-buttons">
+                        <button className={`filter-btn ${filter === 'all' ? 'active' : ''}`} onClick={() => setFilter('all')}>All</button>
+                        <button className={`filter-btn ${filter === 'autocad' ? 'active' : ''}`} onClick={() => setFilter('autocad')}>AutoCAD</button>
+                        <button className={`filter-btn ${filter === 'zwcad' ? 'active' : ''}`} onClick={() => setFilter('zwcad')}>ZWCAD</button>
+                        <button className={`filter-btn ${filter === 'cadian' ? 'active' : ''}`} onClick={() => setFilter('cadian')}>CADian</button>
+                    </div>
+                </div>
+
+                {/* Coupang Partners Banner */}
+                <div className="coupang-banner" style={{ margin: '20px 0', textAlign: 'center' }}>
+                    <iframe src="https://ads-partners.coupang.com/widgets.html?id=767963&template=carousel&trackingCode=AF0624364&subId=&width=680&height=140" width="680" height="140" frameBorder="0" scrolling="no" referrerPolicy="unsafe-url"></iframe>
+                </div>
+
+                <div className="features-grid">
+                    {filteredFeatures.map(feature => (
+                        <div key={feature.id} className={`feature-card ${feature.software.toLowerCase()}`}>
+                            <div className="card-header">
+                                <span className={`badge ${feature.software.toLowerCase()}`}>{feature.software}</span>
+                                <span className={`badge ${feature.difficulty.toLowerCase()}`}>{feature.difficulty}</span>
+                            </div>
+                            <h3>
+                                <a href={`/features/${feature.difficulty.toLowerCase()}/${feature.software.toLowerCase()}/${feature.name.toLowerCase().replace(/\s+/g, '-')}/`}>
+                                    {feature.name}
+                                </a>
+                            </h3>
+                            <p>{feature.description}</p>
+                            <div className="card-footer">
+                                <span className="category">{feature.category}</span>
+                                {/* Try It Button for supported commands */}
+                                {['LINE', 'CIRCLE', 'ARC'].includes(feature.name.toUpperCase()) && (
+                                    <button
+                                        className="try-btn"
+                                        onClick={(e) => { e.preventDefault(); handleTryIt(feature); }}
+                                    >
+                                        <i className="fas fa-play"></i> Try it!
+                                    </button>
+                                )}
+                            </div>
+                        </div>
+                    ))}
+                </div>
+
+                {/* Simulator Modal */}
+                {showSim && (
+                    <div className="sim-modal-overlay" onClick={closeSim}>
+                        <div className="sim-modal-content" onClick={e => e.stopPropagation()}>
+                            <div className="sim-header">
+                                <h2>Web CAD Simulator: {simCommand?.name}</h2>
+                                <button className="close-btn" onClick={closeSim}>&times;</button>
+                            </div>
+                            <div className="sim-body">
+                                <canvas ref={canvasRef} id="cad-canvas" width="800" height="500"></canvas>
+                                <div className="sim-instructions">
+                                    <p><strong>Instructions:</strong> Click on the canvas to draw. Press ESC to cancel, Enter to finish.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                )}
+            </div>
+        );
+    }
+
+    const root = ReactDOM.createRoot(document.getElementById('react-root'));
+    root.render(<FeatureBrowser />);
+</script>
+
+<style>
+    .features-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 20px;
+    }
+
+    .feature-card {
+        border: 1px solid #e2e8f0;
+        border-radius: 8px;
+        padding: 20px;
+        background: white;
+        transition: transform 0.2s;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .feature-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .card-footer {
+        margin-top: auto;
+        padding-top: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .badge {
+        padding: 4px 8px;
+        border-radius: 4px;
+        font-size: 0.8em;
+        font-weight: bold;
+        margin-right: 5px;
+    }
+
+    .badge.autocad {
+        background: #e0e7ff;
+        color: #3730a3;
+    }
+
+    .badge.zwcad {
+        background: #dcfce7;
+        color: #166534;
+    }
+
+    .badge.cadian {
+        background: #ffe4e6;
+        color: #be123c;
+    }
+
+    .filter-btn {
+        padding: 8px 16px;
+        margin-right: 5px;
+        border: 1px solid #ccc;
+        background: white;
+        cursor: pointer;
+        border-radius: 4px;
+    }
+
+    .filter-btn.active {
+        background: #2563eb;
+        color: white;
+        border-color: #2563eb;
+    }
+
+    .try-btn {
+        background: #10b981;
+        color: white;
+        border: none;
+        padding: 6px 12px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 0.85em;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .try-btn:hover {
+        background: #059669;
+    }
+
+    /* Modal Styles */
+    .sim-modal-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 10000;
+    }
+
+    .sim-modal-content {
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        width: 850px;
+        max-width: 95%;
+    }
+
+    .sim-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+
+    .sim-header h2 {
+        margin: 0;
+        font-size: 1.5rem;
+    }
+
+    .close-btn {
+        background: none;
+        border: none;
+        font-size: 2rem;
+        cursor: pointer;
+        color: #666;
+    }
+
+    .close-btn:hover {
+        color: #000;
+    }
+
+    .sim-body {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #cad-canvas {
+        background: #222;
+        cursor: crosshair;
+        border: 2px solid #444;
+        border-radius: 4px;
+    }
+
+    .sim-instructions {
+        background: #f3f4f6;
+        padding: 10px;
+        border-radius: 4px;
+        font-size: 0.9em;
+    }
+
+    .sim-instructions p {
+        margin: 0;
+    }
+</style>

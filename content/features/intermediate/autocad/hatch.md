@@ -16,10 +16,39 @@ layout: feature
 ## 기능 설명 (Description)
 닫힌 영역이나 선택한 객체를 해치 패턴으로 채웁니다.
 
+<!-- AdSense Fluid -->
+<div class="ad-container" style="margin: 20px 0;">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5240158357882882" crossorigin="anonymous"></script>
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-format="fluid"
+         data-ad-layout-key="-6t+ed+2i-1n-4w"
+         data-ad-client="ca-pub-5240158357882882"
+         data-ad-slot="3083770395"></ins>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
 
 ## 동영상 강좌 (Video Tutorial)
 <div class="video-container">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/HUe2GxCajMI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<!-- AdSense Square -->
+<div class="ad-container" style="text-align:center; margin: 20px 0;">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5240158357882882" crossorigin="anonymous"></script>
+    <!-- 사각1 -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-5240158357882882"
+         data-ad-slot="5669571134"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
 </div>
 
 
