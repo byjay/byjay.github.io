@@ -1,7 +1,7 @@
 // 메인 JavaScript 파일
 
 // DOM이 로드된 후 실행
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     initializeApp();
 });
 
@@ -11,7 +11,12 @@ function initializeApp() {
     setupSmoothScrolling();
     setupSearchFunctionality();
     setupAnimations();
-    loadTutorials();
+
+    // Load tutorials via TutorialManager
+    if (window.TutorialManager && window.TutorialManager.loadTutorials) {
+        window.TutorialManager.loadTutorials();
+    }
+
     loadTips();
 }
 
@@ -21,9 +26,9 @@ function setupMobileMenu() {
     const navMenu = document.querySelector('.nav-menu');
 
     if (mobileMenuToggle && navMenu) {
-        mobileMenuToggle.addEventListener('click', function() {
+        mobileMenuToggle.addEventListener('click', function () {
             navMenu.classList.toggle('active');
-            
+
             // 아이콘 변경
             const icon = this.querySelector('i');
             if (navMenu.classList.contains('active')) {
@@ -36,7 +41,7 @@ function setupMobileMenu() {
         // 메뉴 링크 클릭 시 모바일 메뉴 닫기
         const navLinks = navMenu.querySelectorAll('.nav-link');
         navLinks.forEach(link => {
-            link.addEventListener('click', function() {
+            link.addEventListener('click', function () {
                 navMenu.classList.remove('active');
                 mobileMenuToggle.querySelector('i').className = 'fas fa-bars';
             });
@@ -47,18 +52,18 @@ function setupMobileMenu() {
 // 부드러운 스크롤 설정
 function setupSmoothScrolling() {
     const links = document.querySelectorAll('a[href^="#"]');
-    
+
     links.forEach(link => {
-        link.addEventListener('click', function(e) {
+        link.addEventListener('click', function (e) {
             e.preventDefault();
-            
+
             const targetId = this.getAttribute('href');
             const targetElement = document.querySelector(targetId);
-            
+
             if (targetElement) {
                 const headerHeight = document.querySelector('.header').offsetHeight;
                 const targetPosition = targetElement.offsetTop - headerHeight;
-                
+
                 window.scrollTo({
                     top: targetPosition,
                     behavior: 'smooth'
@@ -76,9 +81,9 @@ function setupSearchFunctionality() {
     if (searchInput && searchBtn) {
         // 검색 버튼 클릭
         searchBtn.addEventListener('click', performSearch);
-        
+
         // Enter 키 입력
-        searchInput.addEventListener('keypress', function(e) {
+        searchInput.addEventListener('keypress', function (e) {
             if (e.key === 'Enter') {
                 performSearch();
             }
@@ -90,41 +95,41 @@ function setupSearchFunctionality() {
 function performSearch() {
     const searchInput = document.getElementById('searchInput');
     const query = searchInput.value.trim().toLowerCase();
-    
+
     if (query) {
         // 실제 검색 로직 구현
         console.log('검색어:', query);
-        
+
         // 강좌 카드들을 검색
         const tutorialCards = document.querySelectorAll('.tutorial-card');
         const tipCards = document.querySelectorAll('.tip-card');
-        
+
         let foundResults = false;
-        
+
         // 강좌 검색
         tutorialCards.forEach(card => {
             const title = card.querySelector('.tutorial-title').textContent.toLowerCase();
             const description = card.querySelector('.tutorial-description').textContent.toLowerCase();
-            
+
             if (title.includes(query) || description.includes(query)) {
                 card.style.display = 'block';
                 card.scrollIntoView({ behavior: 'smooth', block: 'center' });
                 foundResults = true;
             }
         });
-        
+
         // 팁 검색
         tipCards.forEach(card => {
             const title = card.querySelector('.tip-title').textContent.toLowerCase();
             const description = card.querySelector('.tip-description').textContent.toLowerCase();
-            
+
             if (title.includes(query) || description.includes(query)) {
                 card.style.display = 'block';
                 card.scrollIntoView({ behavior: 'smooth', block: 'center' });
                 foundResults = true;
             }
         });
-        
+
         if (!foundResults) {
             alert('검색 결과가 없습니다.');
         }
@@ -139,7 +144,7 @@ function setupAnimations() {
         rootMargin: '0px 0px -50px 0px'
     };
 
-    const observer = new IntersectionObserver(function(entries) {
+    const observer = new IntersectionObserver(function (entries) {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.style.opacity = '1';
@@ -150,7 +155,7 @@ function setupAnimations() {
 
     // 애니메이션 대상 요소들
     const animatedElements = document.querySelectorAll('.tutorial-card, .tip-card, .resource-card');
-    
+
     animatedElements.forEach(element => {
         element.style.opacity = '0';
         element.style.transform = 'translateY(20px)';
@@ -163,20 +168,20 @@ function setupAnimations() {
 function updateActiveNavigation() {
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.nav-link');
-    
-    window.addEventListener('scroll', function() {
+
+    window.addEventListener('scroll', function () {
         let current = '';
         const scrollPosition = window.scrollY + 100;
-        
+
         sections.forEach(section => {
             const sectionTop = section.offsetTop;
             const sectionHeight = section.offsetHeight;
-            
+
             if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
                 current = section.getAttribute('id');
             }
         });
-        
+
         navLinks.forEach(link => {
             link.classList.remove('active');
             if (link.getAttribute('href') === '#' + current) {
@@ -189,8 +194,8 @@ function updateActiveNavigation() {
 // 스크롤 시 헤더 스타일 변경
 function setupHeaderScrollEffect() {
     const header = document.querySelector('.header');
-    
-    window.addEventListener('scroll', function() {
+
+    window.addEventListener('scroll', function () {
         if (window.scrollY > 100) {
             header.style.background = 'rgba(255, 255, 255, 0.95)';
             header.style.backdropFilter = 'blur(10px)';
@@ -202,7 +207,7 @@ function setupHeaderScrollEffect() {
 }
 
 // 페이지 로드 시 실행
-window.addEventListener('load', function() {
+window.addEventListener('load', function () {
     updateActiveNavigation();
     setupHeaderScrollEffect();
 });
@@ -210,7 +215,7 @@ window.addEventListener('load', function() {
 // 유틸리티 함수들
 const utils = {
     // 디바운스 함수
-    debounce: function(func, wait) {
+    debounce: function (func, wait) {
         let timeout;
         return function executedFunction(...args) {
             const later = () => {
@@ -221,9 +226,9 @@ const utils = {
             timeout = setTimeout(later, wait);
         };
     },
-    
+
     // 요소가 뷰포트에 있는지 확인
-    isInViewport: function(element) {
+    isInViewport: function (element) {
         const rect = element.getBoundingClientRect();
         return (
             rect.top >= 0 &&
@@ -232,18 +237,18 @@ const utils = {
             rect.right <= (window.innerWidth || document.documentElement.clientWidth)
         );
     },
-    
+
     // 로컬 스토리지 헬퍼
     storage: {
-        set: function(key, value) {
+        set: function (key, value) {
             try {
                 localStorage.setItem(key, JSON.stringify(value));
             } catch (e) {
                 console.error('로컬 스토리지 저장 실패:', e);
             }
         },
-        
-        get: function(key) {
+
+        get: function (key) {
             try {
                 const item = localStorage.getItem(key);
                 return item ? JSON.parse(item) : null;
@@ -252,8 +257,8 @@ const utils = {
                 return null;
             }
         },
-        
-        remove: function(key) {
+
+        remove: function (key) {
             try {
                 localStorage.removeItem(key);
             } catch (e) {
