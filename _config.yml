@@ -1,0 +1,9 @@
+title: AutoCAD & ZWCAD Help
+description: Ultimate guide for CAD features and Lisp routines.
+theme: jekyll-theme-cayman
+plugins:
+  - jekyll-seo-tag
+collections:
+  features:
+    output: true
+    permalink: /features/:path/

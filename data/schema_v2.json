@@ -1,0 +1,35 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "id": { "type": "string" },
+      "name": { "type": "string" },
+      "software": { 
+        "type": "string",
+        "enum": ["AutoCAD", "ZWCAD"]
+      },
+      "description": { "type": "string" },
+      "steps": { 
+        "type": "array",
+        "items": { "type": "string" }
+      },
+      "images": { 
+        "type": "array",
+        "items": { "type": "string" }
+      },
+      "videos": { 
+        "type": "array",
+        "items": { "type": "string" }
+      },
+      "difficulty": { 
+        "type": "string",
+        "enum": ["Start", "Beginner", "Intermediate", "Advanced"]
+      },
+      "category": { "type": "string" },
+      "source_url": { "type": "string" }
+    },
+    "required": ["id", "name", "software", "description"]
+  }
+}

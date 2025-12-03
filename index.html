@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,9 +8,12 @@
     <meta name="description" content="오토캐드 초보자를 위한 단계별 강좌와 실무 팁을 제공하는 전문 블로그입니다.">
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/responsive.css">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Inter:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
+
 <body>
     <!-- 헤더 -->
     <header class="header">
@@ -22,15 +26,19 @@
                 <nav class="nav">
                     <ul class="nav-menu">
                         <li><a href="#home" class="nav-link active">홈</a></li>
-                        <li class="dropdown">
-                            <a href="#tutorials" class="nav-link">강좌 <i class="fas fa-chevron-down"></i></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#basic-tutorials">기초 강좌</a></li>
-                                <li><a href="#advanced-tutorials">심화 강좌</a></li>
+                        <li class="dropdown" role="none">
+                            <a href="#tutorials" class="nav-link" aria-haspopup="true" aria-expanded="false"
+                                role="menuitem">강좌 <i class="fas fa-chevron-down"></i></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li role="none"><a href="#basic-tutorials" role="menuitem">기초 강좌</a></li>
+                                <li role="none"><a href="#advanced-tutorials" role="menuitem">심화 강좌</a></li>
                             </ul>
                         </li>
+
                         <li><a href="#tips" class="nav-link">팁 & 노하우</a></li>
                         <li><a href="#resources" class="nav-link">자료실</a></li>
+                        <li><a href="/features/" class="nav-link">기능 블로그</a></li>
+                        <li><a href="/lisp-generator/" class="nav-link">리습 생성기</a></li>
                         <li><a href="#about" class="nav-link">소개</a></li>
                     </ul>
                 </nav>
@@ -56,8 +64,8 @@
                     <div class="hero-text">
                         <h1 class="hero-title">오토캐드를 <span class="highlight">쉽고 빠르게</span> 배우세요</h1>
                         <p class="hero-description">
-                            초보자부터 전문가까지, 단계별 강좌와 실무 팁으로 
-                            오토캐드 마스터가 되어보세요. 실제 예제와 함께하는 
+                            초보자부터 전문가까지, 단계별 강좌와 실무 팁으로
+                            오토캐드 마스터가 되어보세요. 실제 예제와 함께하는
                             체계적인 학습을 제공합니다.
                         </p>
                         <div class="hero-buttons">
@@ -167,7 +175,7 @@
                         <span>AutoCAD 강좌</span>
                     </div>
                     <p class="footer-description">
-                        오토캐드 학습을 위한 최고의 온라인 강좌 플랫폼입니다. 
+                        오토캐드 학습을 위한 최고의 온라인 강좌 플랫폼입니다.
                         체계적인 커리큘럼과 실무 중심의 콘텐츠를 제공합니다.
                     </p>
                 </div>
@@ -210,5 +218,5 @@
     <script src="scripts/tutorials.js"></script>
     <script src="scripts/search.js"></script>
 </body>
-</html>
 
+</html>

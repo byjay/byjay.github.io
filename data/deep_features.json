@@ -1,0 +1,682 @@
+[
+  {
+    "id": "autocad_circle",
+    "name": "CIRCLE",
+    "software": "AutoCAD",
+    "description": "원을 작성합니다.",
+    "steps": [
+      "명령어를 입력합니다.",
+      "프롬프트의 지시를 따릅니다."
+    ],
+    "images": [],
+    "videos": [
+      "uH6sWf5_0-U"
+    ],
+    "difficulty": "Beginner",
+    "category": "그리기",
+    "source_url": "https://help.autodesk.com/view/ACD/2024/KOR/"
+  },
+  {
+    "id": "autocad_arc",
+    "name": "ARC",
+    "software": "AutoCAD",
+    "description": "호(Arc)를 작성합니다.",
+    "steps": [
+      "명령어를 입력합니다.",
+      "프롬프트의 지시를 따릅니다."
+    ],
+    "images": [],
+    "videos": [
+      "chsbcTTBUgA"
+    ],
+    "difficulty": "Beginner",
+    "category": "그리기",
+    "source_url": "https://help.autodesk.com/view/ACD/2024/KOR/"
+  },
+  {
+    "id": "autocad_line",
+    "name": "LINE",
+    "software": "AutoCAD",
+    "description": "직선 세그먼트를 작성합니다.",
+    "steps": [
+      "명령어를 입력합니다.",
+      "프롬프트의 지시를 따릅니다."
+    ],
+    "images": [],
+    "videos": [
+      "HDfE6AlU1YM"
+    ],
+    "difficulty": "Beginner",
+    "category": "그리기",
+    "source_url": "https://help.autodesk.com/view/ACD/2024/KOR/"
+  },
+  {
+    "id": "autocad_rectang",
+    "name": "RECTANG",
+    "software": "AutoCAD",
+    "description": "직사각형 폴리선을 작성합니다.",
+    "steps": [
+      "명령어를 입력합니다.",
+      "프롬프트의 지시를 따릅니다."
+    ],
+    "images": [],
+    "videos": [
+      "gObJGEkNRRI"
+    ],
+    "difficulty": "Beginner",
+    "category": "그리기",
+    "source_url": "https://help.autodesk.com/view/ACD/2024/KOR/"
+  },
+  {
+    "id": "autocad_pline",
+    "name": "PLINE",
+    "software": "AutoCAD",
+    "description": "2D 폴리선을 작성합니다.",
+    "steps": [
+      "명령어를 입력합니다.",
+      "프롬프트의 지시를 따릅니다."
+    ],
+    "images": [],
+    "videos": [
+      "dk0MERkdzj0"
+    ],
+    "difficulty": "Intermediate",
+    "category": "그리기",
+    "source_url": "https://help.autodesk.com/view/ACD/2024/KOR/"
+  },
+  {
+    "id": "autocad_hatch",
+    "name": "HATCH",
+    "software": "AutoCAD",
+    "description": "닫힌 영역이나 선택한 객체를 해치 패턴으로 채웁니다.",
+    "steps": [
+      "명령어를 입력합니다.",
+      "프롬프트의 지시를 따릅니다."
+    ],
+    "images": [],
+    "videos": [
+      "HUe2GxCajMI"
+    ],
+    "difficulty": "Intermediate",
+    "category": "그리기",
+    "source_url": "https://help.autodesk.com/view/ACD/2024/KOR/"
+  },
+  {
+    "id": "autocad_copy",
+    "name": "COPY",
+    "software": "AutoCAD",
+    "description": "객체를 지정한 방향과 거리만큼 복사합니다.",
+    "steps": [
+      "명령어를 입력합니다.",
+      "프롬프트의 지시를 따릅니다."
+    ],
+    "images": [],
+    "videos": [
+      "i2TJ8nx2EgY"
+    ],
+    "difficulty": "Beginner",
+    "category": "수정",
+    "source_url": "https://help.autodesk.com/view/ACD/2024/KOR/"
+  },
+  {
+    "id": "autocad_move",
+    "name": "MOVE",
+    "software": "AutoCAD",
+    "description": "객체를 지정한 방향과 거리만큼 이동합니다.",
+    "steps": [
+      "명령어를 입력합니다.",
+      "프롬프트의 지시를 따릅니다."
+    ],
+    "images": [],
+    "videos": [
+      "VJI8a2q-_O0"
+    ],
+    "difficulty": "Beginner",
+    "category": "수정",
+    "source_url": "https://help.autodesk.com/view/ACD/2024/KOR/"
+  },
+  {
+    "id": "autocad_rotate",
+    "name": "ROTATE",
+    "software": "AutoCAD",
+    "description": "기준점을 중심으로 객체를 회전합니다.",
+    "steps": [
+      "명령어를 입력합니다.",
+      "프롬프트의 지시를 따릅니다."
+    ],
+    "images": [],
+    "videos": [
+      "53G5Zz8yE8o"
+    ],
+    "difficulty": "Beginner",
+    "category": "수정",
+    "source_url": "https://help.autodesk.com/view/ACD/2024/KOR/"
+  },
+  {
+    "id": "autocad_scale",
+    "name": "SCALE",
+    "software": "AutoCAD",
+    "description": "객체의 비율을 유지하면서 크기를 확대하거나 축소합니다.",
+    "steps": [
+      "명령어를 입력합니다.",
+      "프롬프트의 지시를 따릅니다."
+    ],
+    "images": [],
+    "videos": [
+      "umGbcwnYwoI"
+    ],
+    "difficulty": "Intermediate",
+    "category": "수정",
+    "source_url": "https://help.autodesk.com/view/ACD/2024/KOR/"
+  },
+  {
+    "id": "autocad_trim",
+    "name": "TRIM",
+    "software": "AutoCAD",
+    "description": "다른 객체의 모서리를 기준으로 객체를 자릅니다.",
+    "steps": [
+      "명령어를 입력합니다.",
+      "프롬프트의 지시를 따릅니다."
+    ],
+    "images": [],
+    "videos": [
+      "AdmD5V3wXWs"
+    ],
+    "difficulty": "Beginner",
+    "category": "수정",
+    "source_url": "https://help.autodesk.com/view/ACD/2024/KOR/"
+  },
+  {
+    "id": "autocad_extend",
+    "name": "EXTEND",
+    "software": "AutoCAD",
+    "description": "다른 객체의 모서리까지 객체를 연장합니다.",
+    "steps": [
+      "명령어를 입력합니다.",
+      "프롬프트의 지시를 따릅니다."
+    ],
+    "images": [],
+    "videos": [
+      "_AnrKFTI4_c"
+    ],
+    "difficulty": "Beginner",
+    "category": "수정",
+    "source_url": "https://help.autodesk.com/view/ACD/2024/KOR/"
+  },
+  {
+    "id": "autocad_fillet",
+    "name": "FILLET",
+    "software": "AutoCAD",
+    "description": "객체의 모서리를 둥글게 깎습니다.",
+    "steps": [
+      "명령어를 입력합니다.",
+      "프롬프트의 지시를 따릅니다."
+    ],
+    "images": [],
+    "videos": [
+      "W5ECqP1MrTM"
+    ],
+    "difficulty": "Intermediate",
+    "category": "수정",
+    "source_url": "https://help.autodesk.com/view/ACD/2024/KOR/"
+  },
+  {
+    "id": "autocad_chamfer",
+    "name": "CHAMFER",
+    "software": "AutoCAD",
+    "description": "객체의 모서리를 모따기합니다.",
+    "steps": [
+      "명령어를 입력합니다.",
+      "프롬프트의 지시를 따릅니다."
+    ],
+    "images": [],
+    "videos": [
+      "dN8coOTcW5Q"
+    ],
+    "difficulty": "Intermediate",
+    "category": "수정",
+    "source_url": "https://help.autodesk.com/view/ACD/2024/KOR/"
+  },
+  {
+    "id": "autocad_offset",
+    "name": "OFFSET",
+    "software": "AutoCAD",
+    "description": "동심원, 평행선, 평행 곡선을 작성합니다.",
+    "steps": [
+      "명령어를 입력합니다.",
+      "프롬프트의 지시를 따릅니다."
+    ],
+    "images": [],
+    "videos": [
+      "XmKOpR4zZ1w"
+    ],
+    "difficulty": "Intermediate",
+    "category": "수정",
+    "source_url": "https://help.autodesk.com/view/ACD/2024/KOR/"
+  },
+  {
+    "id": "autocad_mirror",
+    "name": "MIRROR",
+    "software": "AutoCAD",
+    "description": "선택한 객체의 대칭 사본을 작성합니다.",
+    "steps": [
+      "명령어를 입력합니다.",
+      "프롬프트의 지시를 따릅니다."
+    ],
+    "images": [],
+    "videos": [
+      "QrdQVA8jL8g"
+    ],
+    "difficulty": "Intermediate",
+    "category": "수정",
+    "source_url": "https://help.autodesk.com/view/ACD/2024/KOR/"
+  },
+  {
+    "id": "autocad_array",
+    "name": "ARRAY",
+    "software": "AutoCAD",
+    "description": "객체의 사본을 패턴으로 배열합니다.",
+    "steps": [
+      "명령어를 입력합니다.",
+      "프롬프트의 지시를 따릅니다."
+    ],
+    "images": [],
+    "videos": [
+      "8SVw8E055KI"
+    ],
+    "difficulty": "Advanced",
+    "category": "수정",
+    "source_url": "https://help.autodesk.com/view/ACD/2024/KOR/"
+  },
+  {
+    "id": "autocad_text",
+    "name": "TEXT",
+    "software": "AutoCAD",
+    "description": "단일 행 문자 객체를 작성합니다.",
+    "steps": [
+      "명령어를 입력합니다.",
+      "프롬프트의 지시를 따릅니다."
+    ],
+    "images": [],
+    "videos": [
+      "2ESsqEX0f8M"
+    ],
+    "difficulty": "Beginner",
+    "category": "주석",
+    "source_url": "https://help.autodesk.com/view/ACD/2024/KOR/"
+  },
+  {
+    "id": "autocad_mtext",
+    "name": "MTEXT",
+    "software": "AutoCAD",
+    "description": "여러 줄 문자 객체를 작성합니다.",
+    "steps": [
+      "명령어를 입력합니다.",
+      "프롬프트의 지시를 따릅니다."
+    ],
+    "images": [],
+    "videos": [
+      "tuFsYIpYwME"
+    ],
+    "difficulty": "Intermediate",
+    "category": "주석",
+    "source_url": "https://help.autodesk.com/view/ACD/2024/KOR/"
+  },
+  {
+    "id": "autocad_block",
+    "name": "BLOCK",
+    "software": "AutoCAD",
+    "description": "선택한 객체로 블록 정의를 작성합니다.",
+    "steps": [
+      "명령어를 입력합니다.",
+      "프롬프트의 지시를 따릅니다."
+    ],
+    "images": [],
+    "videos": [
+      "euh_A7UzfOI"
+    ],
+    "difficulty": "Intermediate",
+    "category": "블록",
+    "source_url": "https://help.autodesk.com/view/ACD/2024/KOR/"
+  },
+  {
+    "id": "autocad_dimension",
+    "name": "DIMENSION",
+    "software": "AutoCAD",
+    "description": "다양한 유형의 치수를 작성합니다.",
+    "steps": [
+      "명령어를 입력합니다.",
+      "프롬프트의 지시를 따릅니다."
+    ],
+    "images": [],
+    "videos": [
+      "Vh50jsrS0nE"
+    ],
+    "difficulty": "Intermediate",
+    "category": "주석",
+    "source_url": "https://help.autodesk.com/view/ACD/2024/KOR/"
+  },
+  {
+    "id": "autocad_insert",
+    "name": "INSERT",
+    "software": "AutoCAD",
+    "description": "블록이나 도면을 현재 도면에 삽입합니다.",
+    "steps": [
+      "명령어를 입력합니다.",
+      "프롬프트의 지시를 따릅니다."
+    ],
+    "images": [],
+    "videos": [
+      "xGI6jId3Aac"
+    ],
+    "difficulty": "Intermediate",
+    "category": "블록",
+    "source_url": "https://help.autodesk.com/view/ACD/2024/KOR/"
+  },
+  {
+    "id": "autocad_wblock",
+    "name": "WBLOCK",
+    "software": "AutoCAD",
+    "description": "객체나 블록을 새 도면 파일로 저장합니다.",
+    "steps": [
+      "명령어를 입력합니다.",
+      "프롬프트의 지시를 따릅니다."
+    ],
+    "images": [],
+    "videos": [
+      "HxGk2UvkA2M"
+    ],
+    "difficulty": "Advanced",
+    "category": "블록",
+    "source_url": "https://help.autodesk.com/view/ACD/2024/KOR/"
+  },
+  {
+    "id": "autocad_layer",
+    "name": "LAYER",
+    "software": "AutoCAD",
+    "description": "도면층(레이어)과 도면층 특성을 관리합니다.",
+    "steps": [
+      "명령어를 입력합니다.",
+      "프롬프트의 지시를 따릅니다."
+    ],
+    "images": [],
+    "videos": [
+      "VLN9PP5zrQY"
+    ],
+    "difficulty": "Beginner",
+    "category": "관리",
+    "source_url": "https://help.autodesk.com/view/ACD/2024/KOR/"
+  },
+  {
+    "id": "autocad_properties",
+    "name": "PROPERTIES",
+    "software": "AutoCAD",
+    "description": "객체의 특성을 제어합니다.",
+    "steps": [
+      "명령어를 입력합니다.",
+      "프롬프트의 지시를 따릅니다."
+    ],
+    "images": [],
+    "videos": [
+      "mEKPllR0fXg"
+    ],
+    "difficulty": "Intermediate",
+    "category": "관리",
+    "source_url": "https://help.autodesk.com/view/ACD/2024/KOR/"
+  },
+  {
+    "id": "autocad_xref",
+    "name": "XREF",
+    "software": "AutoCAD",
+    "description": "외부 참조 도면을 관리합니다.",
+    "steps": [
+      "명령어를 입력합니다.",
+      "프롬프트의 지시를 따릅니다."
+    ],
+    "images": [],
+    "videos": [
+      "MF0_PHYUZBw"
+    ],
+    "difficulty": "Advanced",
+    "category": "관리",
+    "source_url": "https://help.autodesk.com/view/ACD/2024/KOR/"
+  },
+  {
+    "id": "autocad_plot",
+    "name": "PLOT",
+    "software": "AutoCAD",
+    "description": "도면을 플로터, 프린터 또는 파일로 출력합니다.",
+    "steps": [
+      "명령어를 입력합니다.",
+      "프롬프트의 지시를 따릅니다."
+    ],
+    "images": [],
+    "videos": [
+      "zh3DfvlmF00"
+    ],
+    "difficulty": "Intermediate",
+    "category": "출력",
+    "source_url": "https://help.autodesk.com/view/ACD/2024/KOR/"
+  },
+  {
+    "id": "autocad_purge",
+    "name": "PURGE",
+    "software": "AutoCAD",
+    "description": "사용되지 않는 블록 정의, 도면층 등을 도면에서 제거합니다.",
+    "steps": [
+      "명령어를 입력합니다.",
+      "프롬프트의 지시를 따릅니다."
+    ],
+    "images": [],
+    "videos": [
+      "Bc0R9GpPE58"
+    ],
+    "difficulty": "Advanced",
+    "category": "관리",
+    "source_url": "https://help.autodesk.com/view/ACD/2024/KOR/"
+  },
+  {
+    "id": "autocad_recover",
+    "name": "RECOVER",
+    "software": "AutoCAD",
+    "description": "손상된 도면 파일을 복구합니다.",
+    "steps": [
+      "명령어를 입력합니다.",
+      "프롬프트의 지시를 따릅니다."
+    ],
+    "images": [],
+    "videos": [
+      "mWO4k11-wRw"
+    ],
+    "difficulty": "Advanced",
+    "category": "관리",
+    "source_url": "https://help.autodesk.com/view/ACD/2024/KOR/"
+  },
+  {
+    "id": "autocad_audit",
+    "name": "AUDIT",
+    "software": "AutoCAD",
+    "description": "도면의 무결성을 평가하고 오류를 수정합니다.",
+    "steps": [
+      "명령어를 입력합니다.",
+      "프롬프트의 지시를 따릅니다."
+    ],
+    "images": [],
+    "videos": [
+      "PVT8Ba02rPI"
+    ],
+    "difficulty": "Advanced",
+    "category": "관리",
+    "source_url": "https://help.autodesk.com/view/ACD/2024/KOR/"
+  },
+  {
+    "id": "zwcad_smart_mouse",
+    "name": "Smart Mouse",
+    "software": "ZWCAD",
+    "description": "마우스 제스처를 사용하여 명령을 실행합니다.",
+    "steps": [
+      "기능을 실행합니다.",
+      "옵션을 설정합니다."
+    ],
+    "images": [],
+    "videos": [
+      "X5K4h78acBg"
+    ],
+    "difficulty": "Intermediate",
+    "category": "스마트 기능",
+    "source_url": "https://www.zwsoft.co.kr"
+  },
+  {
+    "id": "zwcad_smart_voice",
+    "name": "Smart Voice",
+    "software": "ZWCAD",
+    "description": "도면에 음성 메모를 추가합니다.",
+    "steps": [
+      "기능을 실행합니다.",
+      "옵션을 설정합니다."
+    ],
+    "images": [],
+    "videos": [
+      "-7UjGi-eo_0"
+    ],
+    "difficulty": "Intermediate",
+    "category": "스마트 기능",
+    "source_url": "https://www.zwsoft.co.kr"
+  },
+  {
+    "id": "zwcad_smart_select",
+    "name": "Smart Select",
+    "software": "ZWCAD",
+    "description": "특정 조건에 맞는 객체를 빠르게 선택합니다.",
+    "steps": [
+      "기능을 실행합니다.",
+      "옵션을 설정합니다."
+    ],
+    "images": [],
+    "videos": [
+      "-E7_sDOA4OQ"
+    ],
+    "difficulty": "Intermediate",
+    "category": "스마트 기능",
+    "source_url": "https://www.zwsoft.co.kr"
+  },
+  {
+    "id": "zwcad_smart_plot",
+    "name": "Smart Plot",
+    "software": "ZWCAD",
+    "description": "여러 도면을 한 번에 효율적으로 출력합니다.",
+    "steps": [
+      "기능을 실행합니다.",
+      "옵션을 설정합니다."
+    ],
+    "images": [],
+    "videos": [
+      "WecvU38Br1Q"
+    ],
+    "difficulty": "Intermediate",
+    "category": "스마트 기능",
+    "source_url": "https://www.zwsoft.co.kr"
+  },
+  {
+    "id": "zwcad_flexiblock",
+    "name": "Flexiblock",
+    "software": "ZWCAD",
+    "description": "블록을 유연하게 편집하고 재사용할 수 있는 기능입니다.",
+    "steps": [
+      "기능을 실행합니다.",
+      "옵션을 설정합니다."
+    ],
+    "images": [],
+    "videos": [
+      "GCzax-C207A"
+    ],
+    "difficulty": "Advanced",
+    "category": "블록",
+    "source_url": "https://www.zwsoft.co.kr"
+  },
+  {
+    "id": "zwcad_ifc_import",
+    "name": "IFC Import",
+    "software": "ZWCAD",
+    "description": "BIM 데이터 교환을 위한 IFC 파일을 가져옵니다.",
+    "steps": [
+      "기능을 실행합니다.",
+      "옵션을 설정합니다."
+    ],
+    "images": [],
+    "videos": [
+      "NxTfVwNr1EQ"
+    ],
+    "difficulty": "Advanced",
+    "category": "호환성",
+    "source_url": "https://www.zwsoft.co.kr"
+  },
+  {
+    "id": "zwcad_point_cloud",
+    "name": "Point Cloud",
+    "software": "ZWCAD",
+    "description": "3D 레이저 스캔 데이터를 가져와서 활용합니다.",
+    "steps": [
+      "기능을 실행합니다.",
+      "옵션을 설정합니다."
+    ],
+    "images": [],
+    "videos": [
+      "vWsDy0yFGhs"
+    ],
+    "difficulty": "Advanced",
+    "category": "3D",
+    "source_url": "https://www.zwsoft.co.kr"
+  },
+  {
+    "id": "zwcad_file_compare",
+    "name": "File Compare",
+    "software": "ZWCAD",
+    "description": "두 도면 간의 차이점을 시각적으로 비교합니다.",
+    "steps": [
+      "기능을 실행합니다.",
+      "옵션을 설정합니다."
+    ],
+    "images": [],
+    "videos": [
+      "YVxU7fDuZjI"
+    ],
+    "difficulty": "Intermediate",
+    "category": "도구",
+    "source_url": "https://www.zwsoft.co.kr"
+  },
+  {
+    "id": "zwcad_data_extraction",
+    "name": "Data Extraction",
+    "software": "ZWCAD",
+    "description": "객체 데이터를 테이블이나 외부 파일로 추출합니다.",
+    "steps": [
+      "기능을 실행합니다.",
+      "옵션을 설정합니다."
+    ],
+    "images": [],
+    "videos": [
+      "Tlavfau3gj8"
+    ],
+    "difficulty": "Advanced",
+    "category": "도구",
+    "source_url": "https://www.zwsoft.co.kr"
+  },
+  {
+    "id": "zwcad_sheet_set_manager",
+    "name": "Sheet Set Manager",
+    "software": "ZWCAD",
+    "description": "여러 도면 시트를 체계적으로 관리합니다.",
+    "steps": [
+      "기능을 실행합니다.",
+      "옵션을 설정합니다."
+    ],
+    "images": [],
+    "videos": [
+      "KDbi14QsvvU"
+    ],
+    "difficulty": "Advanced",
+    "category": "관리",
+    "source_url": "https://www.zwsoft.co.kr"
+  }
+]
