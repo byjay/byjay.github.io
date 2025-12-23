@@ -1,0 +1,242 @@
+[
+    {
+        "id": "lisp_ppp",
+        "name": "다중 플롯 (PPP)",
+        "description": "여러 장의 도면을 한 번에 PDF로 출력합니다.",
+        "command": "PPP",
+        "category": "출력",
+        "code": "(defun c:PPP ( / ) (princ \"\\nMulti-Plot script running...\") (command \"_PLOT\" ...))"
+    },
+    {
+        "id": "lisp_area_sum",
+        "name": "면적 합계 산출 (QA)",
+        "description": "선택한 여러 객체의 면적을 합산하여 텍스트로 기입합니다.",
+        "command": "QA",
+        "category": "계산",
+        "code": "(defun c:QA ( / ss i ent area total) ... )"
+    },
+    {
+        "id": "lisp_len_sum",
+        "name": "길이 합계 산출 (QL)",
+        "description": "선택한 선, 폴리선, 호의 전체 길이를 합산합니다. 물량 산출에 필수.",
+        "command": "QL",
+        "category": "계산",
+        "code": "(defun c:QL ( / ss total_len ) ... )"
+    },
+    {
+        "id": "lisp_text_inc",
+        "name": "숫자 자동 증감 (INC)",
+        "description": "1, 2, 3... 클릭할 때마다 숫자가 자동으로 증가하며 입력됩니다.",
+        "command": "INC",
+        "category": "텍스트",
+        "code": "(defun c:INC ( / n pt ) ... )"
+    },
+    {
+        "id": "lisp_block_count",
+        "name": "블록 수량 집계 (BQT)",
+        "description": "도면 내 모든 블록의 개수를 세어 표로 작성해줍니다.",
+        "command": "BQT",
+        "category": "블록",
+        "code": "(defun c:BQT ( / blk_list ) ... )"
+    },
+    {
+        "id": "lisp_layer_off",
+        "name": "선택 레이어 끄기 (LO)",
+        "description": "클릭한 객체의 레이어를 즉시 끕니다. 복잡한 도면 정리할 때 최고.",
+        "command": "LO",
+        "category": "레이어",
+        "code": "(defun c:LO ( / ent lay ) (setq ent (car (entsel))) (setq lay (cdr (assoc 8 (entget ent)))) (command \"-layer\" \"off\" lay \"\") (princ))"
+    },
+    {
+        "id": "lisp_layer_iso",
+        "name": "선택 레이어만 남기기 (LISO)",
+        "description": "선택한 객체의 레이어만 남기고 나머지는 모두 끕니다.",
+        "command": "LISO",
+        "category": "레이어",
+        "code": "(defun c:LISO ( / ) (command \"LAYISO\" ...))"
+    },
+    {
+        "id": "lisp_tex_align",
+        "name": "텍스트 정렬 (TA)",
+        "description": "비뚤어진 텍스트들을 지정한 선 기준으로 일렬 정렬합니다.",
+        "command": "TA",
+        "category": "텍스트",
+        "code": "(defun c:TA ( / ss pt ) ... )"
+    },
+    {
+        "id": "lisp_z_zero",
+        "name": "Z값 0으로 만들기 (SZ)",
+        "description": "3D 좌표가 섞여서 오스냅이 안 잡힐 때, 모든 객체의 Z값을 0으로 평탄화합니다.",
+        "command": "SZ",
+        "category": "수정",
+        "code": "(defun c:SZ ( / ss ) ... )"
+    },
+    {
+        "id": "lisp_box_text",
+        "name": "텍스트 박스 그리기 (TB)",
+        "description": "텍스트 주변에 딱 맞는 사각형 테두리를 자동으로 그립니다.",
+        "command": "TB",
+        "category": "텍스트",
+        "code": "(defun c:TB ( / ent box ) ... )"
+    },
+    {
+        "id": "lisp_break_point",
+        "name": "교차점 끊기 (BRP)",
+        "description": "선들이 교차하는 지점을 한 번에 모두 끊어줍니다.",
+        "command": "BRP",
+        "category": "수정",
+        "code": "(defun c:BRP ( / ss ) ... )"
+    },
+    {
+        "id": "lisp_scale_ref",
+        "name": "참조 스케일 (SCR)",
+        "description": "길이를 모를 때, '이 길이를 저 길이로' 맞춰주는 똑똑한 스케일.",
+        "command": "SCR",
+        "category": "수정",
+        "code": "(defun c:SCR ( / ) ... )"
+    },
+    {
+        "id": "lisp_draw_center",
+        "name": "중심선 그리기 (CEN)",
+        "description": "원이나 사각형을 선택하면 자동으로 중심선을 그려줍니다.",
+        "command": "CEN",
+        "category": "그리기",
+        "code": "(defun c:CEN ( / ) ... )"
+    },
+    {
+        "id": "lisp_pur_all",
+        "name": "강력 퍼지 (PUA)",
+        "description": "일반 PURGE로 안 지워지는 끈질긴 찌꺼기까지 삭제합니다.",
+        "command": "PUA",
+        "category": "관리",
+        "code": "(defun c:PUA ( / ) ... )"
+    },
+    {
+        "id": "lisp_num_sum",
+        "name": "숫자 텍스트 합산 (NS)",
+        "description": "선택한 문자들 중 숫자만 인식해서 총합을 계산합니다.",
+        "command": "NS",
+        "category": "계산",
+        "code": "(defun c:NS ( / ) ... )"
+    },
+    {
+        "id": "lisp_lay_cur",
+        "name": "현재 레이어 변경 (LC)",
+        "description": "선택한 객체의 레이어로 현재 작업 레이어를 변경합니다.",
+        "command": "LC",
+        "category": "레이어",
+        "code": "(defun c:LC ( / ) ... )"
+    },
+    {
+        "id": "lisp_align_obj",
+        "name": "객체 정렬 (ALO)",
+        "description": "객체들을 왼쪽/오른쪽/중앙/상단/하단 기준으로 정렬합니다.",
+        "command": "ALO",
+        "category": "수정",
+        "code": "(defun c:ALO ( / ) ... )"
+    },
+    {
+        "id": "lisp_dim_update",
+        "name": "치수 스타일 일괄 적용 (DU)",
+        "description": "뒤죽박죽인 치수들을 현재 스타일로 한 번에 통일합니다.",
+        "command": "DU",
+        "category": "치수",
+        "code": "(defun c:DU ( / ) ... )"
+    },
+    {
+        "id": "lisp_file_path",
+        "name": "파일 경로 기입 (FP)",
+        "description": "도면 구석에 현재 파일의 저장 경로와 날짜를 자동으로 적습니다.",
+        "command": "FP",
+        "category": "유틸",
+        "code": "(defun c:FP ( / ) ... )"
+    },
+    {
+        "id": "lisp_cloud_rev",
+        "name": "구름 마크 그리기 (REV)",
+        "description": "수정된 부분을 강조하는 구름 마크(Revision Cloud)를 예쁘게 그립니다.",
+        "command": "REV",
+        "category": "그리기",
+        "code": "(defun c:REV ( / ) ... )"
+    },
+    {
+        "id": "lisp_lock_all",
+        "name": "모든 레이어 잠금 (LAL)",
+        "description": "도면을 참조용으로만 볼 때 실수로 수정하지 않도록 전체 잠금.",
+        "command": "LAL",
+        "category": "레이어",
+        "code": "(defun c:LAL ( / ) ... )"
+    },
+    {
+        "id": "lisp_unlock_all",
+        "name": "모든 레이어 잠금 해제 (ULA)",
+        "description": "LAL로 잠근 도면을 다시 편집 모드로 풉니다.",
+        "command": "ULA",
+        "category": "레이어",
+        "code": "(defun c:ULA ( / ) ... )"
+    },
+    {
+        "id": "lisp_rot_ref",
+        "name": "참조 회전 (ROR)",
+        "description": "각도를 몰라도 '이 선과 평행하게' 회전시킬 수 있습니다.",
+        "command": "ROR",
+        "category": "수정",
+        "code": "(defun c:ROR ( / ) ... )"
+    },
+    {
+        "id": "lisp_off_del",
+        "name": "오프셋 후 원본 삭제 (OD)",
+        "description": "간격 띄우기(Offset)를 한 후 원본 객체는 지워줍니다. (이동 효과)",
+        "command": "OD",
+        "category": "수정",
+        "code": "(defun c:OD ( / ) ... )"
+    },
+    {
+        "id": "lisp_lay_frz",
+        "name": "레이어 동결 (LF)",
+        "description": "레이어 끄기(Off)보다 강력한 동결(Freeze)을 클릭으로 수행합니다.",
+        "command": "LF",
+        "category": "레이어",
+        "code": "(defun c:LF ( / ) ... )"
+    },
+    {
+        "id": "lisp_txt_upper",
+        "name": "소문자 대문자 변환 (UP)",
+        "description": "선택한 영어 텍스트를 모두 대문자로 바꿉니다.",
+        "command": "UP",
+        "category": "텍스트",
+        "code": "(defun c:UP ( / ) ... )"
+    },
+    {
+        "id": "lisp_col_by_lay",
+        "name": "색상 ByLayer로 변경 (CBL)",
+        "description": "강제로 색상이 지정된 객체들을 레이어 색상 따르도록 초기화합니다.",
+        "command": "CBL",
+        "category": "수정",
+        "code": "(defun c:CBL ( / ) ... )"
+    },
+    {
+        "id": "lisp_lt_by_lay",
+        "name": "선타입 ByLayer로 변경 (LBL)",
+        "description": "강제로 선타입이 지정된 객체들을 레이어 선타입 따르도록 초기화합니다.",
+        "command": "LBL",
+        "category": "수정",
+        "code": "(defun c:LBL ( / ) ... )"
+    },
+    {
+        "id": "lisp_zoom_ext",
+        "name": "줌 익스텐트 (ZE)",
+        "description": "도면 전체가 꽉 차게 보이도록 줌을 조절합니다. (Z 엔터 E 엔터 단축)",
+        "command": "ZE",
+        "category": "뷰",
+        "code": "(defun c:ZE ( / ) (command \"zoom\" \"e\") (princ))"
+    },
+    {
+        "id": "lisp_quick_save",
+        "name": "초고속 저장 (QS)",
+        "description": "불필요한 미리보기 생성 없이 빠르게 저장하여 시간을 단축합니다.",
+        "command": "QS",
+        "category": "유틸",
+        "code": "(defun c:QS ( / ) (command \"qsave\") (princ))"
+    }
+]

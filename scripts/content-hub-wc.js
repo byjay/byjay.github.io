@@ -226,7 +226,7 @@
         if (item.type === 'tutorial') {
             link = `course_view.html?id=${item.id}`;
         } else if (item.type === 'feature') {
-            link = `/features-react/?q=${encodeURIComponent(item.name)}`;
+            link = `feature-view.html?id=${item.id}`;
         }
 
         return `

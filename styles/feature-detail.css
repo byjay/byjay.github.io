@@ -1,0 +1,218 @@
+/* Feature Detail World Class Styles */
+:root {
+    --detail-bg: #0a0a0b;
+    --detail-card-bg: rgba(255, 255, 255, 0.03);
+    --detail-border: rgba(255, 255, 255, 0.1);
+    --accent-glow: 0 0 20px rgba(99, 102, 241, 0.3);
+}
+
+.feature-detail-container {
+    max-width: 1200px;
+    margin: 100px auto 4rem;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 3rem;
+}
+
+/* 사이드바 (연관 로직 & 목차) */
+.detail-sidebar {
+    position: sticky;
+    top: 120px;
+    height: fit-content;
+}
+
+.logic-card {
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(168, 85, 247, 0.1));
+    border: 1px solid var(--detail-border);
+    border-radius: 16px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.logic-title {
+    font-size: 0.9rem;
+    color: var(--accent-primary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.logic-step {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 0.8rem;
+    opacity: 0.6;
+    transition: 0.3s;
+}
+
+.logic-step.active {
+    opacity: 1;
+    font-weight: 600;
+    color: white;
+}
+
+.logic-step i {
+    margin-top: 4px;
+    font-size: 0.8rem;
+}
+
+/* 메인 콘텐츠 */
+.detail-main-header {
+    margin-bottom: 3rem;
+}
+
+.command-badge {
+    display: inline-block;
+    padding: 6px 12px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+.detail-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, #fff 0%, #a5b4fc 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1.1;
+}
+
+.detail-desc {
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    max-width: 800px;
+}
+
+/* 옵션 탭 섹션 */
+.options-section {
+    background: var(--detail-card-bg);
+    border: 1px solid var(--detail-border);
+    border-radius: 20px;
+    padding: 2rem;
+    margin-bottom: 3rem;
+}
+
+.option-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.option-card {
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--detail-border);
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: 0.3s;
+}
+
+.option-card:hover {
+    border-color: var(--accent-primary);
+    transform: translateY(-3px);
+}
+
+.option-key {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1.2rem;
+    color: var(--accent-secondary);
+    margin-bottom: 0.5rem;
+    display: inline-block;
+}
+
+.option-name {
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: white;
+}
+
+.option-desc {
+    font-size: 0.9rem;
+    color: var(--text-tertiary);
+    line-height: 1.6;
+}
+
+/* 프로팁 (엔지니어의 한마디) */
+.pro-tip-box {
+    background: linear-gradient(to right, rgba(245, 158, 11, 0.1), transparent);
+    border-left: 4px solid #f59e0b;
+    padding: 2rem;
+    border-radius: 0 16px 16px 0;
+    margin: 3rem 0;
+}
+
+.pro-tip-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #f59e0b;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+/* LISP 연동 섹션 */
+.lisp-section {
+    margin-top: 4rem;
+    border-top: 1px solid var(--detail-border);
+    padding-top: 3rem;
+}
+
+.lisp-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(16, 185, 129, 0.05);
+    border: 1px solid rgba(16, 185, 129, 0.2);
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin-top: 1.5rem;
+}
+
+.lisp-info h4 {
+    color: #34d399;
+    margin-bottom: 0.5rem;
+}
+
+.btn-download {
+    padding: 0.75rem 1.5rem;
+    background: rgba(16, 185, 129, 0.1);
+    color: #34d399;
+    border: 1px solid #34d399;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: 600;
+}
+
+.btn-download:hover {
+    background: #34d399;
+    color: black;
+}
+
+/* 반응형 */
+@media (max-width: 900px) {
+    .feature-detail-container {
+        grid-template-columns: 1fr;
+        margin-top: 80px;
+    }
+
+    .detail-sidebar {
+        position: static;
+        order: 2;
+    }
+
+    .detail-title {
+        font-size: 2.5rem;
+    }
+}
