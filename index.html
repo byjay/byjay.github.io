@@ -5,55 +5,131 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- SEO Meta Tags -->
-    <title>CAD MASTER | 989개 CAD 명령어 · 완벽 가이드</title>
+    <!-- SEO -->
+    <title>30년차 엔지니어의 CAD 노하우 | SEASTAR.work</title>
     <meta name="description"
-        content="AutoCAD, ZWCAD, CADian 989개 명령어 완벽 마스터. LINE, CIRCLE, TRIM 등 모든 명령어 사용법, 단축키, 실무 팁을 한 곳에서. 초보자부터 전문가까지.">
-    <meta name="keywords" content="AutoCAD, ZWCAD, CADian, CAD 명령어, 오토캐드 강좌, CAD 단축키, LINE, CIRCLE, CAD 배우기">
-    <meta name="author" content="CAD MASTER">
-    <meta name="robots" content="index, follow">
+        content="30년 베테랑 엔지니어가 전하는 진짜 CAD 실무 노하우. AutoCAD, ZWCAD 989개 명령어의 숨겨진 꿀팁. 현장에서 바로 쓰는 알짜 기술.">
+    <meta name="keywords" content="CAD 노하우, AutoCAD 팁, 30년차 엔지니어, ZWCAD, 실무 CAD, 엔지니어링">
+    <meta name="author" content="SEASTAR Engineering">
+    <meta name="theme-color" content="#0a0a0b">
 
     <!-- Open Graph -->
+    <meta property="og:title" content="30년차 엔지니어의 CAD 노하우">
+    <meta property="og:description" content="현장에서 30년간 쌓은 진짜 CAD 실무 비법">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="CAD MASTER | 989개 CAD 명령어 완벽 가이드">
-    <meta property="og:description" content="AutoCAD, ZWCAD, CADian 전문 학습 플랫폼. 989개 명령어 가이드.">
-    <meta property="og:locale" content="ko_KR">
 
-    <!-- Theme -->
-    <meta name="theme-color" content="#0a0a0b">
-    <meta name="color-scheme" content="dark">
-
-    <!-- Preconnect -->
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <!-- Fonts & Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <!-- Styles -->
     <link rel="stylesheet" href="styles/world-class.css">
+
+    <style>
+        /* 추가 스타일 - 30년차 엔지니어 컨셉 */
+        .veteran-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            background: linear-gradient(135deg, #f59e0b, #d97706);
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .story-quote {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            font-style: italic;
+            border-left: 3px solid var(--accent-primary);
+            padding-left: 1.5rem;
+            margin: 2rem 0;
+            line-height: 1.8;
+        }
+
+        .engineer-tip {
+            background: rgba(245, 158, 11, 0.1);
+            border: 1px solid rgba(245, 158, 11, 0.3);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .engineer-tip-header {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 0.75rem;
+            color: #f59e0b;
+            font-weight: 600;
+        }
+
+        .seastar-branding {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.8rem;
+            color: var(--text-tertiary);
+        }
+
+        .witty-comment {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            padding: 1rem;
+            background: var(--bg-tertiary);
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
+
+        .witty-comment::before {
+            content: '💬 ';
+        }
+
+        .history-note {
+            font-size: 0.85rem;
+            color: var(--text-tertiary);
+            padding: 0.75rem 1rem;
+            background: rgba(99, 102, 241, 0.1);
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
+
+        .history-note::before {
+            content: '📜 역사 한 줄: ';
+            color: var(--accent-primary);
+            font-weight: 600;
+        }
+    </style>
 </head>
 
 <body>
-    <!-- Animated Background -->
     <div class="animated-bg"></div>
     <div class="grid-pattern"></div>
 
-    <!-- Header -->
+    <!-- Header with SEASTAR branding -->
     <header class="header-world-class" id="header">
         <div class="header-inner">
             <a href="/" class="logo-world-class">
                 <div class="logo-icon-wc">
-                    <i class="fas fa-drafting-compass"></i>
+                    <i class="fas fa-hard-hat"></i>
                 </div>
-                <span class="logo-text-wc">CAD MASTER</span>
+                <div style="display: flex; flex-direction: column;">
+                    <span class="logo-text-wc">CAD 장인의 비법</span>
+                    <span class="seastar-branding">
+                        <i class="fas fa-star"></i> by SEASTAR.work
+                    </span>
+                </div>
             </a>
 
             <nav class="nav-world-class">
                 <a href="#home" class="nav-link-wc active">홈</a>
-                <a href="#content-hub" class="nav-link-wc">콘텐츠</a>
-                <a href="/features-react/" class="nav-link-wc">명령어 사전</a>
-                <a href="/cad단축키.html" class="nav-link-wc">단축키</a>
+                <a href="#content-hub" class="nav-link-wc">노하우 사전</a>
+                <a href="/features-react/" class="nav-link-wc">명령어 DB</a>
+                <a href="https://seastar.work" class="nav-link-wc" target="_blank">SEASTAR</a>
                 <a href="#content-hub" class="nav-cta-wc">
                     <i class="fas fa-search"></i>
                     검색
@@ -62,67 +138,73 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Hero - 30년차 엔지니어 스토리 -->
     <section class="hero-cinematic" id="home">
         <div class="hero-content-wc">
-            <!-- Badge -->
-            <div class="hero-badge-wc">
-                <span class="badge-dot"></span>
-                <span>국내 최대 CAD 학습 플랫폼</span>
+            <div class="veteran-badge">
+                <i class="fas fa-medal"></i>
+                <span>30년차 현장 엔지니어의 실전 노하우</span>
             </div>
 
-            <!-- Title -->
             <h1 class="hero-title-wc">
-                <span class="gradient-text">989개</span> CAD 명령어를<br>
-                완벽하게 마스터
+                <span class="gradient-text">989개</span> 명령어의<br>
+                숨겨진 비법을 전합니다
             </h1>
 
-            <!-- Subtitle -->
+            <!-- 히어로 이미지 -->
+            <div style="margin: 2rem auto; max-width: 400px;">
+                <img src="images/hero-engineer.png" alt="30년차 CAD 엔지니어"
+                    style="width: 100%; border-radius: 20px; box-shadow: 0 20px 60px rgba(99,102,241,0.3);">
+            </div>
+
             <p class="hero-subtitle-wc">
-                AutoCAD, ZWCAD, CADian의 모든 명령어와 단축키,<br>
-                실무 강좌와 팁을 한 곳에서 검색하고 학습하세요.
+                1994년 AutoCAD R13부터 2024년 최신 버전까지,<br>
+                현장에서 직접 부딪히며 터득한 진짜 노하우를 공개합니다.
             </p>
 
-            <!-- Bento Grid Stats -->
+            <p class="story-quote">
+                "매뉴얼엔 없는 것들이 있어요. 30년간 도면 수만 장을 그리면서<br>
+                깨달은 '아, 이렇게 하면 되는구나' 하는 순간들... 그걸 나누고 싶었습니다."
+            </p>
+
             <div class="bento-grid">
                 <div class="bento-card">
                     <div class="bento-value" id="heroFeatureCount">989</div>
-                    <div class="bento-label">명령어</div>
+                    <div class="bento-label">명령어 해부</div>
                 </div>
                 <div class="bento-card">
-                    <div class="bento-value" id="heroTutorialCount">8</div>
-                    <div class="bento-label">강좌</div>
+                    <div class="bento-value">30</div>
+                    <div class="bento-label">년 경력</div>
                 </div>
                 <div class="bento-card">
-                    <div class="bento-value" id="heroTipCount">8</div>
-                    <div class="bento-label">팁</div>
+                    <div class="bento-value">50K+</div>
+                    <div class="bento-label">도면 작성</div>
                 </div>
                 <div class="bento-card">
-                    <div class="bento-value">3</div>
-                    <div class="bento-label">소프트웨어</div>
+                    <div class="bento-value">∞</div>
+                    <div class="bento-label">꿀팁</div>
                 </div>
             </div>
 
-            <!-- CTA Buttons -->
             <div class="hero-cta-group-wc">
                 <a href="#content-hub" class="btn-primary-wc">
-                    <i class="fas fa-rocket"></i>
-                    시작하기
+                    <i class="fas fa-lightbulb"></i>
+                    노하우 탐색
                 </a>
-                <a href="/features-react/" class="btn-secondary-wc">
-                    <i class="fas fa-book-open"></i>
-                    명령어 사전
+                <a href="https://seastar.work" class="btn-secondary-wc" target="_blank">
+                    <i class="fas fa-building"></i>
+                    SEASTAR 소개
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- Search Section -->
+    <!-- 검색 -->
     <section class="search-section-wc">
         <div class="search-box-wc">
             <i class="fas fa-search search-icon-wc"></i>
-            <input type="text" id="hubSearchInput" class="search-input-wc" placeholder="LINE, CIRCLE, 레이어, 블록 등 검색..."
-                autocomplete="off">
+            <input type="text" id="hubSearchInput" class="search-input-wc"
+                placeholder="LINE 잘 쓰는 법, TRIM 비밀, 레이어 정리 꿀팁...">
             <button class="search-btn-wc" id="searchBtn">
                 검색
                 <i class="fas fa-arrow-right"></i>
@@ -130,107 +212,129 @@
         </div>
     </section>
 
-    <!-- Content Hub -->
+    <!-- 노하우 허브 -->
     <main class="content-hub-wc" id="content-hub">
-        <!-- Header -->
         <div class="hub-header-wc">
             <div class="hub-eyebrow">
-                <i class="fas fa-sparkles"></i>
-                통합 라이브러리
+                <i class="fas fa-gem"></i>
+                실전 노하우 라이브러리
             </div>
-            <h2 class="hub-title-wc">모든 CAD 학습 자료</h2>
+            <h2 class="hub-title-wc">매뉴얼엔 없는 진짜 비법들</h2>
             <p class="hub-subtitle-wc">
-                강좌, 팁, 명령어를 필터링하고 필요한 내용을 빠르게 찾으세요
+                30년 동안 현장에서 몸으로 익힌 꿀팁들을 카테고리별로 정리했습니다
             </p>
         </div>
 
-        <!-- Filter Tabs -->
+        <!-- 필터 탭 -->
         <div class="filter-tabs-wc" id="contentFilters">
             <button class="filter-tab active" data-filter="type" data-value="all">
                 <i class="fas fa-th-large"></i>
-                전체
+                전체 노하우
                 <span class="count" id="countAll">0</span>
             </button>
             <button class="filter-tab" data-filter="type" data-value="tutorial">
                 <i class="fas fa-graduation-cap"></i>
-                강좌
+                기초 다지기
                 <span class="count" id="countTutorial">0</span>
             </button>
             <button class="filter-tab" data-filter="type" data-value="tip">
                 <i class="fas fa-lightbulb"></i>
-                팁
+                현장 꿀팁
                 <span class="count" id="countTip">0</span>
             </button>
             <button class="filter-tab" data-filter="type" data-value="feature">
                 <i class="fas fa-terminal"></i>
-                명령어
+                명령어 해부
                 <span class="count" id="countFeature">0</span>
             </button>
         </div>
 
-        <!-- Content Grid -->
+        <!-- 콘텐츠 그리드 -->
         <div id="contentGrid" class="content-grid-wc">
-            <!-- Loading -->
             <div style="grid-column: 1 / -1; text-align: center; padding: 80px 20px;">
-                <i class="fas fa-circle-notch fa-spin"
-                    style="font-size: 2.5rem; color: var(--accent-primary); margin-bottom: 1rem;"></i>
-                <p style="color: var(--text-tertiary);">콘텐츠를 불러오는 중...</p>
+                <i class="fas fa-hard-hat fa-spin" style="font-size: 2.5rem; color: var(--accent-primary);"></i>
+                <p style="margin-top: 1rem; color: var(--text-tertiary);">30년 노하우를 정리하는 중...</p>
             </div>
         </div>
 
-        <!-- Load More -->
         <div class="load-more-wc">
             <button id="loadMoreBtn" class="btn-load-more-wc" style="display: none;">
                 <i class="fas fa-plus"></i>
-                더 보기
+                더 많은 비법 보기
             </button>
         </div>
     </main>
+
+    <!-- 역사 섹션 -->
+    <section style="padding: 4rem 2rem; background: var(--bg-secondary);">
+        <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+            <h2 style="font-size: 1.75rem; margin-bottom: 1rem;">🕰️ AutoCAD와 함께한 30년</h2>
+            <p style="color: var(--text-secondary); margin-bottom: 2rem;">
+                1994년 R13 시절부터 2024년 지금까지, CAD의 발전과 함께 성장했습니다
+            </p>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+                <div class="history-note">1994년 R13 - 처음 CAD를 만나다</div>
+                <div class="history-note">2000년 R14 - 첫 대형 프로젝트</div>
+                <div class="history-note">2010년 - 3D 모델링 입문</div>
+                <div class="history-note">2020년 - 클라우드 CAD 전환</div>
+            </div>
+
+            <div class="witty-comment" style="margin-top: 2rem;">
+                "R13 시절엔 저장하는 데만 5분 걸렸어요. 그때 커피 한 잔 마시면서 기다리던 게 그립네요... 아니, 안 그립습니다. 😅"
+            </div>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer class="footer-wc">
         <div class="footer-grid-wc">
             <div class="footer-brand-wc">
-                <a href="/" class="logo-world-class">
+                <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
                     <div class="logo-icon-wc">
-                        <i class="fas fa-drafting-compass"></i>
+                        <i class="fas fa-hard-hat"></i>
                     </div>
-                    <span class="logo-text-wc">CAD MASTER</span>
-                </a>
-                <p>AutoCAD, ZWCAD, CADian 학습을 위한 국내 최대 온라인 플랫폼. 989개 명령어 가이드와 체계적인 커리큘럼.</p>
+                    <div>
+                        <div class="logo-text-wc">CAD 장인의 비법</div>
+                        <div class="seastar-branding">
+                            <i class="fas fa-star"></i> SEASTAR Engineering
+                        </div>
+                    </div>
+                </div>
+                <p>30년 현장 경험을 바탕으로 한 진짜 CAD 노하우. SEASTAR Engineering에서 운영합니다.</p>
             </div>
 
             <div>
-                <h4 class="footer-title-wc">강좌</h4>
+                <h4 class="footer-title-wc">노하우</h4>
                 <ul class="footer-links-wc">
-                    <li><a href="#start-tutorials">시작반</a></li>
-                    <li><a href="#basic-tutorials">기초반</a></li>
-                    <li><a href="#intermediate-tutorials">중급반</a></li>
-                    <li><a href="#advanced-tutorials">고급반</a></li>
+                    <li><a href="#basic">기초 다지기</a></li>
+                    <li><a href="#intermediate">실무 스킬업</a></li>
+                    <li><a href="#advanced">고급 테크닉</a></li>
+                    <li><a href="#tips">현장 꿀팁</a></li>
                 </ul>
             </div>
 
             <div>
                 <h4 class="footer-title-wc">도구</h4>
                 <ul class="footer-links-wc">
-                    <li><a href="/features-react/">명령어 사전</a></li>
+                    <li><a href="/features-react/">명령어 DB</a></li>
                     <li><a href="/lisp-generator/">리습 생성기</a></li>
                     <li><a href="/cad단축키.html">단축키 모음</a></li>
                 </ul>
             </div>
 
             <div>
-                <h4 class="footer-title-wc">소프트웨어</h4>
+                <h4 class="footer-title-wc">SEASTAR</h4>
                 <ul class="footer-links-wc">
-                    <li><a href="#content-hub">AutoCAD</a></li>
-                    <li><a href="#content-hub">ZWCAD</a></li>
-                    <li><a href="#content-hub">CADian</a></li>
+                    <li><a href="https://seastar.work" target="_blank">회사 소개</a></li>
+                    <li><a href="https://seastar.work" target="_blank">엔지니어링 서비스</a></li>
+                    <li><a href="https://seastar.work" target="_blank">문의하기</a></li>
                 </ul>
             </div>
         </div>
 
         <div class="footer-bottom-wc">
-            <p class="footer-copy-wc">© 2025 CAD MASTER. All rights reserved.</p>
+            <p class="footer-copy-wc">© 2025 SEASTAR Engineering. 30년 노하우를 담았습니다.</p>
         </div>
     </footer>
 
@@ -240,56 +344,28 @@
     <script src="scripts/content-hub-wc.js"></script>
 
     <script>
-        // Header scroll effect
+        // Header scroll
         window.addEventListener('scroll', () => {
             const header = document.getElementById('header');
-            if (window.scrollY > 50) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
+            header.classList.toggle('scrolled', window.scrollY > 50);
         });
 
         // Smooth scroll
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
+        document.querySelectorAll('a[href^="#"]').forEach(a => {
+            a.addEventListener('click', e => {
                 e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
+                document.querySelector(a.getAttribute('href'))?.scrollIntoView({ behavior: 'smooth' });
             });
         });
 
-        // Search handlers
+        // Search
         document.getElementById('searchBtn')?.addEventListener('click', () => {
-            const input = document.getElementById('hubSearchInput');
-            if (input) {
-                input.dispatchEvent(new Event('input', { bubbles: true }));
-            }
+            document.getElementById('hubSearchInput')?.dispatchEvent(new Event('input', { bubbles: true }));
         });
 
-        document.getElementById('hubSearchInput')?.addEventListener('keypress', (e) => {
-            if (e.key === 'Enter') {
-                document.getElementById('searchBtn')?.click();
-            }
+        document.getElementById('hubSearchInput')?.addEventListener('keypress', e => {
+            if (e.key === 'Enter') document.getElementById('searchBtn')?.click();
         });
-    </script>
-
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": "CAD MASTER",
-        "url": "https://byjay.github.io/",
-        "description": "989개 CAD 명령어 완벽 가이드",
-        "potentialAction": {
-            "@type": "SearchAction",
-            "target": "https://byjay.github.io/?search={search_term_string}",
-            "query-input": "required name=search_term_string"
-        }
-    }
     </script>
 </body>
 
