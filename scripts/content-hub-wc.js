@@ -87,12 +87,40 @@
             });
         }
 
-        // Features
+        // Features (Core + Legacy Merge)
         try {
-            const response = await fetch('/data/deep_features.json');
-            if (response.ok) {
-                const features = await response.json();
-                features.forEach(f => {
+            const [coreRes, deepRes] = await Promise.all([
+                fetch('data/deep_core_commands.json'),
+                fetch('data/deep_features.json')
+            ]);
+
+            const coreCommands = coreRes.ok ? await coreRes.json() : [];
+            const deepFeatures = deepRes.ok ? await deepRes.json() : [];
+
+            const addedIds = new Set();
+
+            // 1. Add Core Commands (High Quality with keywords)
+            coreCommands.forEach(f => {
+                const item = {
+                    id: f.id,
+                    title: f.name,
+                    name: f.name,
+                    description: f.description,
+                    type: 'feature',
+                    category: f.category || 'Core',
+                    difficulty: (f.difficulty || 'intermediate').toLowerCase(),
+                    software: f.software || 'AutoCAD',
+                    icon: 'fas fa-star', // Distinct icon for core
+                    keywords: f.keywords || [] // Import keywords
+                };
+                item.hashtags = generateHashtags(item);
+                state.allContent.push(item);
+                addedIds.add(f.id);
+            });
+
+            // 2. Add remaining features
+            deepFeatures.forEach(f => {
+                if (!addedIds.has(f.id)) {
                     const item = {
                         id: f.id,
                         title: f.name,
@@ -102,14 +130,16 @@
                         category: f.category || '일반',
                         difficulty: (f.difficulty || 'intermediate').toLowerCase(),
                         software: f.software || 'AutoCAD',
-                        icon: 'fas fa-terminal'
+                        icon: 'fas fa-terminal',
+                        keywords: []
                     };
                     item.hashtags = generateHashtags(item);
                     state.allContent.push(item);
-                });
-            }
+                }
+            });
+
         } catch (e) {
-            console.warn('Features 로드 실패:', e);
+            console.warn('Features 로드 실패 (Partial):', e);
         }
 
         state.filteredContent = [...state.allContent];
@@ -163,7 +193,9 @@
                 const title = (item.title || item.name || '').toLowerCase();
                 const desc = (item.description || '').toLowerCase();
                 const cat = (item.category || '').toLowerCase();
-                if (!title.includes(q) && !desc.includes(q) && !cat.includes(q)) {
+                const kw = (item.keywords || []).join(' ').toLowerCase(); // Check keywords
+
+                if (!title.includes(q) && !desc.includes(q) && !cat.includes(q) && !kw.includes(q)) {
                     return false;
                 }
             }

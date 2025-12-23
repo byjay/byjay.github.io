@@ -34,6 +34,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         renderFeatureDetail(feature);
         renderLogicSidebar(feature, logicGroups);
+        renderVersionHistory(feature); // New
         renderRelatedLisp(feature, lispLibrary);
 
     } catch (error) {
@@ -150,5 +151,25 @@ function renderRelatedLisp(feature, lispLibrary) {
                 </button>
             </div>
         `).join('');
+    }
+}
+
+function renderVersionHistory(feature) {
+    const box = document.getElementById('versionHistoryBox');
+    const list = document.getElementById('versionList');
+
+    if (feature.version_history && feature.version_history.length > 0) {
+        box.style.display = 'block';
+        list.innerHTML = feature.version_history.map(v => `
+            <div class="version-item">
+                <div class="version-badge">${v.version}</div>
+                <div class="version-content">
+                    <div class="version-change">${v.change}</div>
+                    <div class="version-solution"><i class="fas fa-lightbulb"></i> ${v.solution}</div>
+                </div>
+            </div>
+        `).join('');
+    } else {
+        box.style.display = 'none';
     }
 }
